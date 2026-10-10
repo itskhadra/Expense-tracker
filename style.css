@@ -1,0 +1,145 @@
+/* 1. Style the whole webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0ff;
+    color: #302744;
+    margin: 0;
+    padding: 25px;
+}
+
+/* 2. Style the top heading */
+header {
+    background-color: #6c3baa;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+header p {
+    color: #eee4ff;
+    margin-bottom: 0;
+}
+
+/* 3. Keep the content neat */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 4. Make each section look like a card */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #e3d9f0;
+}
+
+/* 5. Style the section headings */
+h2 {
+    color: #6c3baa;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* 6. Style the form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+/* 7. Style text boxes and dropdowns */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8cce8;
+    border-radius: 8px;
+    background-color: #fdfbff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* 8. Highlight a box when someone clicks it */
+input:focus,
+select:focus {
+    outline: 2px solid #a77be8;
+    border-color: #6c3baa;
+}
+
+/* 9. Style the buttons */
+button {
+    background-color: #6c3baa;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 10. Change the button color on hover */
+button:hover {
+    background-color: #512782;
+}
+
+/* 11. Make the total easy to see */
+#total-amount {
+    color: #6c3baa;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #f5efff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* 12. Add space above the expense list */
+#expense-list {
+    margin-top: 20px;
+}
+
+/* 13. Style the loading message */
+#loading-message {
+    color: #6c3baa;
+    font-weight: bold;
+}
+
+/* 14. Style error messages */
+#error-message {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* 15. Make the page work well on phones */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 22px 12px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #total-amount {
+        font-size: 24px;
+    }
+}

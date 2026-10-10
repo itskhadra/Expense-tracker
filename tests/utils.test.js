@@ -1,0 +1,41 @@
+
+import test from "node:test";
+import assert from "node:assert/strict";
+import {
+    convertCurrency,
+    calculateTotal,
+    filterExpenses
+} from "../src/utils.js";
+
+test("converts an amount to another currency", function () {
+    assert.equal(convertCurrency(100, 2), 200);
+});
+
+test("calculates the total expenses", function () {
+    assert.equal(calculateTotal([100, 200, 50]), 350);
+});
+
+test("returns only expenses in the selected category", function () {
+    const expenses = [
+        { description: "Lunch", category: "Food" },
+        { description: "Bus", category: "Transport" }
+    ];
+
+    const result = filterExpenses(expenses, "Food");
+
+    assert.equal(result.length, 1);
+    assert.equal(result[0].description, "Lunch");
+});
+
+test("returns zero for an empty list", function () {
+    assert.equal(calculateTotal([]), 0);
+});
+
+test("returns all expenses when All is selected", function () {
+    const expenses = [
+        { category: "Food" },
+        { category: "Transport" }
+    ];
+
+    assert.equal(filterExpenses(expenses, "All").length, 2);
+});
