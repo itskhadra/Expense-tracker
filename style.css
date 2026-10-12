@@ -200,4 +200,16 @@ header {
     color: white;
     padding: 25px 15px;
 }
+/* Keep the main content neat */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Make section headings purple */
+h2 {
+    color: #6d28d9;
+    margin-bottom: 15px;
+}
 
