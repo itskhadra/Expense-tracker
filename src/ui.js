@@ -51,6 +51,7 @@ emptyMessage.hidden = true;
         const details = document.createElement("p");
         const converted = document.createElement("p");
         const deleteButton = document.createElement("button");
+        deleteButton.className = "delete-button";
 
         title.textContent = expense.description;
 
