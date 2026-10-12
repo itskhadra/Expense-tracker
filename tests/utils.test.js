@@ -7,8 +7,8 @@ import {
     filterExpenses
 } from "../src/utils.js";
 
-test("converts an amount to another currency", function () {
-    assert.equal(convertCurrency(100, 2), 200);
+test("converts an amount using the rate for its currency", function () {
+    assert.equal(convertCurrency(100, "EUR", { EUR: 0.5 }), 200);
 });
 
 test("calculates the total expenses", function () {
