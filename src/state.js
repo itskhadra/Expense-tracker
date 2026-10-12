@@ -22,15 +22,7 @@ export function setHomeCurrency(currency) {
     homeCurrency = currency;
 }
 
-// Get all expenses
-export function getExpenses() {
-    return expenses;
-}
 
-// Get the home currency
-export function getHomeCurrency() {
-    return homeCurrency;
-}
 // Save the latest exchange rates
 export function setRates(newRates) {
     rates = newRates;
