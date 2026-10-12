@@ -46,6 +46,7 @@ emptyMessage.hidden = true;
 
     expenses.forEach(function (expense) {
         const card = document.createElement("div");
+        card.className = "expense-card";
         const title = document.createElement("h3");
         const details = document.createElement("p");
         const converted = document.createElement("p");
