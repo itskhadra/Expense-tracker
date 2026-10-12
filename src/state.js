@@ -1,6 +1,7 @@
 export let expenses = [];
 
 export let homeCurrency = "KES";
+export let rates = {};
 
 // Add a new expense
 export function addExpense(expense) {
@@ -27,4 +28,8 @@ export function getExpenses() {
 // Get the home currency
 export function getHomeCurrency() {
     return homeCurrency;
+}
+// Save the latest exchange rates
+export function setRates(newRates) {
+    rates = newRates;
 }
