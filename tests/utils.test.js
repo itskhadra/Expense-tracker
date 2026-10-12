@@ -39,3 +39,9 @@ test("returns all expenses when All is selected", function () {
 
     assert.equal(filterExpenses(expenses, "All").length, 2);
 });
+
+test("throws an error when the rate is missing", function () {
+    assert.throws(function () {
+        convertCurrency(100, "XYZ", { EUR: 0.5 });
+    });
+});
