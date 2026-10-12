@@ -1,4 +1,7 @@
-
+import {
+    calculateTotal,
+    filterExpenses
+} from "./utils.js";
 import { getExchangeRates } from "./api.js";
 import {
     addExpense,
@@ -58,25 +61,19 @@ async function loadRates() {
 }
 
 function updatePage() {
-    const selectedCategory = categoryFilter.value;
-
-    const filteredExpenses = expenses.filter(function (expense) {
-        return selectedCategory === "All" ||
-            expense.category === selectedCategory;
-    });
+    const filteredExpenses = filterExpenses(expenses, categoryFilter.value);
 
     displayExpenses(filteredExpenses, homeCurrency, function (id) {
         deleteExpense(id);
         updatePage();
     });
 
-    const total = expenses.reduce(function (sum, expense) {
-        return sum + (expense.convertedAmount || 0);
-    }, 0);
+    const amounts = expenses.map(function (expense) {
+        return expense.convertedAmount || 0;
+    });
 
-    displayTotal(total, homeCurrency);
+    displayTotal(calculateTotal(amounts), homeCurrency);
 }
-
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
