@@ -45,3 +45,7 @@ test("throws an error when the rate is missing", function () {
         convertCurrency(100, "XYZ", { EUR: 0.5 });
     });
 });
+
+test("returns zero when the amount is zero", function () {
+    assert.equal(convertCurrency(0, "EUR", { EUR: 0.5 }), 0);
+});
